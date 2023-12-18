@@ -1,7 +1,7 @@
 import java.text.DecimalFormat;
 import java.util.Scanner;
 
-public class Calculadora_BRxUSA {
+public class Calculadora {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -9,7 +9,7 @@ public class Calculadora_BRxUSA {
         boolean continuar = true;
         boolean repetir = false;
 
-        System.out.println("Bem vindo à calculadora BR x USA.");
+        System.out.println("Bem vindo à nossa calculadora");
 
         while (continuar == true) {
             boolean escolha_certa = false;
@@ -41,14 +41,14 @@ public class Calculadora_BRxUSA {
                         double grauCelsius = scanner.nextFloat();
 
                         double respKevin = grauCelsius - 173.15;
-                        System.out.print("A temperatura em Kevin é: " + respKevin + "K");
+                        System.out.print("A temperatura em Kevin é: " + df.format(respKevin) + "K");
                         repetir = false;
                     } else if (opcaoTemp == 2) {
                         System.out.println("Informe a temperatura em Kelvin que deseja converter:");
                         double tempKevin = scanner.nextFloat();
 
                         double respCelsius = tempKevin + 173.15;
-                        System.out.print("A temperatura em Célcius é: " + respCelsius + "ºC");
+                        System.out.print("A temperatura em Célcius é: " + df.format(respCelsius) + "ºC");
                         repetir = false;
                     } else {
                         System.out.println("Opção inválida. Por favor, escolha uma opção válida.");
@@ -71,14 +71,14 @@ public class Calculadora_BRxUSA {
                         double medMetros = scanner.nextDouble();
 
                         double respPes = medMetros * 3.28084;
-                        System.out.print("A distância é de:" + respPes + "ft");
+                        System.out.print("A distância é de:" + df.format(respPes) + "ft");
                         repetir = false;
                     } else if (opcaoMedida == 2) {
                         System.out.println("Informe a distância em pés que deseja converter: ");
                         double medPes = scanner.nextDouble();
 
                         double respMetros = medPes / 3.28084;
-                        System.out.print("A distância é de:" + respMetros + "m");
+                        System.out.print("A distância é de:" + df.format(respMetros) + "m");
                         repetir = false;
 
                     } else {
@@ -87,7 +87,7 @@ public class Calculadora_BRxUSA {
                 }
             }
 
-//CONVERSÃO 03 - MOEDA
+//CONVERSÃO 03 - TEMPERATURA
             else if (opcaoEscolhida == 3) {
                 while (repetir) {
                     escolha_certa = true;
