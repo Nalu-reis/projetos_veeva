@@ -108,8 +108,6 @@ body {
   /* Esta fonte não faz parte do reset */
   font-family: "Comic Neue";
   font-weight: 700;
-  /* Não deixa nenhum conteúdo "extra" ser exibido fora da tela principal
-  MAAAAAAAAAAAAAAAS não tem mais a barra e não consigo subir e descer*/
   overflow-x: hidden;
   overflow-y: scroll;
 }
@@ -136,25 +134,27 @@ table {
 /* COMEÇO DA FORMATAÇÃO */
 
 :root {
-  --color-neutral-0: #0e0c0c;
-  --color-neutral-10: #171717;
-  --color-neutral-30: #a8a29e;
-  --color-neutral-40: #f5f5f5;
+    --color-black: #000000;
+    --color-escura:#171717;
+    --color-escura2: #0e0c0c;
+    --color-escura3:#1c1a1a;
+    --color-media:#2a2627;
+    --color-media2:#383334;
+    --color-media3: #989898;
+    --color-clara:#d9d9d9;
+    --color-branca:#f5f5f5;
 }
 
 .header-page {
-  background-color: #0e0d0d;
-  color: #d9d9d9;
-  /* Uma coisa do lado da outra */
-  /* Forma de visualização - configurada pelas linhas 55 e 56*/
+  background-color: var(--color-black);
+  color:var(--color-clara);
   display: flex;
   height: 50px;
   width: 100vw;
-  /* centro da altura */
   align-items: center;
-  /* elementos ficam um em cada ponta, um terceiro ficaria no meio */
   justify-content: space-between;
   padding: 0 25px;
+  cursor: pointer;
 
   h2 img {
     vertical-align: middle;
@@ -175,7 +175,7 @@ main {
 }
 
 .main {
-  background-color: #1c1a1a;
+  background-color: var(--color-escura3);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -192,20 +192,20 @@ main {
 
 .btn {
   color: var(--color-white);
-  border: 1px solid #989898;
-  background-color: #989898;
+  border: 1px solid var(--color-media3);
+  background-color: var(--color-media3);
   padding: 7px 20px;
   font-size: 18px;
   font-family: Arial, Helvetica, sans-serif;
   border-radius: 15px;
-  /*text-transform: capitalize;*/
   transition: 0.4s;
   box-shadow: 0 4px 8px #000002;
+  cursor: pointer;
 }
 
 .btn:hover {
-  background-color: #4d4d4d;
-  border: 1px solid white;
+  background-color: var(--color-clara);
+  border: 1px solid var(--color-branca);
   color: var(--color-white);
 }
 
@@ -219,7 +219,6 @@ main {
 .left {
   max-width: 40nw;
   display: flex;
-  /* O flex direction coloca todos alinhados da direção que eu colocar (column = coluna) */
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -230,7 +229,6 @@ main {
 .rigth {
   max-width: 70vw;
   display: flex;
-  /* O flex direction coloca todos alinhados da direção que eu colocar (column = coluna) */
   flex-direction: row;
   align-items: center;
   justify-content: center;
@@ -266,6 +264,7 @@ main {
     height: 400px;
     width: 100px;
     margin: 15px;
+    cursor: pointer;
     img {
       height: auto;
       width: 50px;
@@ -275,6 +274,7 @@ main {
 
 #prevButton{
   display: none;
+  cursor: pointer;
 }
 
 .botoes {
@@ -287,7 +287,7 @@ main {
 
 .hs {
   margin: 10px;
-  color: #d9d9d9;
+  color: var(--color-clara);
 }
 
 .top {
@@ -304,15 +304,16 @@ main {
 
 footer {
   width: 100%;
-  color: var(--color-neutral-40);
+  color: var(--color-branca);
 }
 
 .footer-link {
   text-decoration: none;
-}
+  cursor: pointer;
+} 
 
 #footer_content {
-  background-color: var(--color-neutral-10);
+  background-color: var(--color-escura);
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   padding: 3rem 3.5rem;
@@ -334,7 +335,7 @@ footer {
   justify-content: center;
   height: 2.5rem;
   width: 2.5rem;
-  color: var(--color-neutral-40);
+  color: var(--color-branca);
   border-radius: 50%;
   transition: all 0.4s;
 }
@@ -349,7 +350,6 @@ footer {
 
 #instagram {
   color: transparent;
-  /* A seta vira dedinho */
   cursor: pointer;
 }
 #instagram:hover {
@@ -383,7 +383,7 @@ footer {
 }
 
 .footer-list .footer-link {
-  color: var(--color-neutral-30);
+  color: var(--color-media3);
   transition: all 0.4s;
 }
 
@@ -398,13 +398,13 @@ footer {
 }
 
 #footer_subscribe p {
-  color: var(--color-neutral-30);
+  color: var(--color-media3);
 }
 
 #input_group {
   display: flex;
   align-items: center;
-  background-color: var(--color-neutral-0);
+  background-color: var(--color-black);
   border-radius: 4px;
 }
 
@@ -417,7 +417,7 @@ footer {
 #input_group button {
   background-color: #7f37c9;
   border: none;
-  color: var(--color-neutral-40);
+  color: var(--color-branca);
   padding: 0px 1.25rem;
   font-size: 1.125rem;
   height: 100%;
@@ -433,7 +433,7 @@ footer {
 #footer_copyright {
   display: flex;
   justify-content: center;
-  background-color: var(--color-neutral-0);
+  background-color: var(--color-black);
   font-size: 0.9rem;
   padding: 1.5rem;
   font-weight: 100;
