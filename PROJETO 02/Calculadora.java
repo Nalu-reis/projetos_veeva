@@ -40,14 +40,14 @@ public class Calculadora {
                         System.out.println("Informe a temperatura em célsius que deseja converter:");
                         double grauCelsius = scanner.nextFloat();
 
-                        double respKevin = grauCelsius - 173.15;
-                        System.out.print("A temperatura em Kevin é: " + df.format(respKevin) + "K");
+                        double respKelvin = grauCelsius - 173.15;
+                        System.out.print("A temperatura em Kelvin é: " + df.format(respKelvin) + "K");
                         repetir = false;
                     } else if (opcaoTemp == 2) {
                         System.out.println("Informe a temperatura em Kelvin que deseja converter:");
-                        double tempKevin = scanner.nextFloat();
+                        double tempKelvin = scanner.nextFloat();
 
-                        double respCelsius = tempKevin + 173.15;
+                        double respCelsius = tempKelvin + 173.15;
                         System.out.print("A temperatura em Célcius é: " + df.format(respCelsius) + "ºC");
                         repetir = false;
                     } else {
@@ -87,7 +87,7 @@ public class Calculadora {
                 }
             }
 
-//CONVERSÃO 03 - TEMPERATURA
+//CONVERSÃO 03 - MOEDA
             else if (opcaoEscolhida == 3) {
                 while (repetir) {
                     escolha_certa = true;
