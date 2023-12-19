@@ -9,7 +9,7 @@ public class Calculadora {
         boolean continuar = true;
         boolean repetir = false;
 
-        System.out.println("Bem vindo à nossa calculadora");
+        System.out.println("Bem-vindo à nossa calculadora");
 
         while (continuar == true) {
             boolean escolha_certa = false;
