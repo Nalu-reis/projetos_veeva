@@ -1,5 +1,3 @@
-Projetos desenvolvidos durante a participação em um processo seletivo visando uma vaga de estágio na empresa Veeva. 
-
 -- P R O J E T O   0 1 
 
 LINK DE ACESSO -> https://6580a9cb7a739815011d3369--meek-cajeta-45de4a.netlify.app//
